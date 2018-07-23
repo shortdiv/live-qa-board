@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form name="ask-question" netlify-honeypot="nickname" method="post" netlify>
+    <form name="ask-question" method="post">
       <input type="hidden" name="form-name" value="qa-question" />
       <p>
         <label>
