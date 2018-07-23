@@ -1,7 +1,7 @@
 <template>
   <div>
-    <form name="ask-question" method="post">
-      <input type="hidden" name="form-name" value="qa-question" />
+    <form method="post">
+      <input type="hidden" name="form-name" value="ask-question" />
       <p>
         <label>
           Your Name:
