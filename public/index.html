@@ -8,6 +8,12 @@
     <title>live-qa-board</title>
   </head>
   <body>
+    <!-- A little help for the Netlify post-processing bots -->
+    <form name="ask-question" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="radio" name="panelist" />
+      <textarea name="question"></textarea>
+    </form>
     <noscript>
       <strong>We're sorry but live-qa-board doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
