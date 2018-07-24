@@ -87,7 +87,7 @@
           this.sent = true
           this.status = {
             code: 'success',
-            text: 'Hello There'
+            text: 'Your question has been posted!'
           }
         })
         .catch(error => {
