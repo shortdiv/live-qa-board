@@ -18,12 +18,20 @@
       </li>
       <li>
         <p>Ask:</p>
-        <label :class="{'pick-panelist': true, 'checked':form.askPerson === panelist}" v-for="panelist in panelists">
+        <label
+          :class="{
+            'pick-panelist': true,
+            'checked':form.askPerson === panelist,
+            'disabled': ifEvan(panelist)
+          }"
+          v-for="panelist in panelists"
+        >
           <input
             type="radio"
             name="panelist"
             @input="ev => form.askPerson = ev.target.value"
             :value="panelist"
+            :disabled="ifEvan(panelist)"
             :checked="form.askPerson === panelist"
           >
           <span>{{ panelist }}</span>
@@ -57,7 +65,7 @@
       return {
         panelists: ["Chris Fritz", "Evan You", "Both"],
         form: {
-          askPerson: "Both",
+          askPerson: "Chris Fritz",
           name: "",
           question: ""
         },
@@ -66,6 +74,9 @@
       }
     },
     methods: {
+      ifEvan (person) {
+        return person === 'Evan You' || person === 'Both'
+      },
       removeNotification () {
         this.sent = false
       },
@@ -134,6 +145,10 @@ p, label {
   z-index: 9;
   cursor: pointer;
   -webkit-transition: all 0.25s linear;
+
+  &.disabled {
+    opacity: 0.5;
+  }
 
   &:before {
     content: '';
