@@ -117,7 +117,7 @@ ul {
   padding: 0;
 }
 
-label {
+p, label {
   color: #64b587;
   font-weight: bold;
 }
@@ -180,7 +180,6 @@ label {
 
 form {
   background: rgb(248,248,248);
-  margin-top: 3em;
   padding: 3em;
   background: #fff;
   color: rgba(14,30,37,0.54);
@@ -223,11 +222,13 @@ span {
   width: 100%;
   padding: 20px 60px;
   outline: none;
-  background-color: #27ae60;
+  background-color: #64b587;
   border: none;
   border-radius: 5px;
   box-shadow: 0 9px #95a5a6;
   font-size: 1.2em;
+  color: white;
+
   &:hover {
     cursor: pointer;
   }
